@@ -42,6 +42,8 @@ scripts/
 data/chroma_store/
 *.parquet
 *.delta
+*.ipynb
+mlflow.db
 _delta_log/
 derby.log
 metastore_db/
