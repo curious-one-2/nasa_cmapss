@@ -1,0 +1,57 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments & local caches
+.venv/
+venv/
+ENV/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# macOS & IDE artifacts
+.DS_Store
+.AppleDouble
+.LSOverride
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Lakehouse data, Delta logs, and ChromaDB persistence
+data/archive/
+data/checkpoints/
+data/lakehouse/
+data/landing/
+data/main_source_storage/
+data/mlruns/
+data/quarentine/
+data/vector_store/
+main.py
+ml/
+mlruns/
+scripts/
+
+data/chroma_store/
+*.parquet
+*.delta
+_delta_log/
+derby.log
+metastore_db/
+spark-warehouse/
+
+# Environment variables, local overrides, and logs
+.env
+.env.*
+!.env.example
+*.local.yaml
+*.local.yml
+*.log
+logs/

@@ -1,0 +1,39 @@
+# conf/app/dev.yaml
+env: dev
+
+paths:
+  landing_cmapss: "data/landing/cmapss"
+  landing_asrs: "data/landing/asrs"
+  landing_rul: "data/landing/rul"
+  bronze_cmapss: "data/lakehouse/bronze/cmapss_sensors_train"
+  bronze_asrs: "data/lakehouse/bronze/asrs"
+  bronze_rul: "data/lakehouse/bronze/rul"
+  bronze_cmapss_test: "data/lakehouse/bronze/cmapss_sensors_test"  
+  silver_cmapss: "data/lakehouse/silver/cmapss_sensors"
+  silver_cmapss_test: "data/lakehouse/silver/cmapss_sensors_test"
+  silver_asrs: "data/lakehouse/silver/asrs"
+  silver_rul: "data/lakehouse/silver/rul"
+  gold_telemetry: "data/lakehouse/gold/fact_engine_telemetry"
+  gold_telemetry_test: "data/lakehouse/gold/fact_engine_telemetry_test"
+  gold_diagnostics: "data/lakehouse/gold/diagnostics"
+  gold_dim_engine: "data/lakehouse/gold/dim_engine"
+  vector_store: "data/vector_store"
+  checkpoints: "data/checkpoints"
+  archive_test: "data/archive/cmapss/test"
+  archive_train: "data/archive/cmapss/train"
+
+vector_store:
+  collection_name: "nasa_asrs_incidents"
+  embedding_model: "nomic-embed-text"
+
+spark:
+  master: "local[4]"
+  shuffle_partitions: "8"
+  driver_memory: "4g" 
+
+test_run:
+  is_test_run: False
+
+cmapss:
+  dataset_subset: "FD001" # Options: FD001, FD002, FD003, FD004 
+  max_rul_cap: 125   
